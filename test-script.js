@@ -1,5 +1,5 @@
-<script>
-  let child = document.createElement('p');
+<script type="text/javascript">
+  const child = document.createElement('p');
   const text = document.createTextNode('hello children');
   child.appendChild(text);
 
