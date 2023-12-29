@@ -1,6 +1,9 @@
-const child = document.createElement('p');
-const text = document.createTextNode('hello children');
-child.appendChild(text);
+window.addEventListener('DOMContentLoaded', () => {
+  const child = document.createElement('p');
+  const text = document.createTextNode('hello children');
+  child.appendChild(text);
+  
+  document.querySelector('h1').appendChild(child)
+});
 
-document.querySelector('h1').appendChild(child)
 
