@@ -1,4 +1,3 @@
-let test123
 const child = document.createElement('p');
 const text = document.createTextNode('hello children');
 child.appendChild(text);
