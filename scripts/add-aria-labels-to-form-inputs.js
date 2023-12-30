@@ -38,10 +38,18 @@ Object.keys(inputs).forEach(name => {
     .replace(/\s+/g, '-')      // Replace spaces with hyphens
 
     const tags = Object.values(inputs[name]);
-    if (tags.length > 1) {
-      Object.values(inputs[name]).forEach( (tag,i) => {
-        tag.setAttribute('aria-label', `${key}-${i+1}`)
-      })
-    } else tags[0].setAttribute('aria-label', key)
+    switch (tags.length) {
+        case 1:
+          tags[0].setAttribute('aria-label', key);
+          break;
+        
+        case 0:
+          break;
+        
+        default:
+          Object.values(inputs[name]).forEach( (tag,i) => {
+            tag.setAttribute('aria-label', `${key}-${i+1}`);
+          });
+      }
   })
 }
